@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package kks.music.apm;
+
+option go_package=apm;
+option php_namespace="Kks\\Music\\Apm";
+
+service ApmService {
+    rpc Get(GetRequest) returns (GetResponse);
+    rpc GetDelay(GetDelayRequest) returns (GetDelayResponse);
+}
+
+message GetRequest {
+}
+
+message GetResponse {
+    string reply = 1;
+}
+
+message GetDelayRequest {
+}
+
+message GetDelayResponse {
+    string reply = 1;
+}
