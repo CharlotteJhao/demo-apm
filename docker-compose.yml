@@ -1,0 +1,12 @@
+# ./docker-compose.yml
+version: '3'
+
+services:
+ go-server:
+  image: golang:1.12.4-alpine
+  working_dir: /app
+  volumes:
+   - ./bin/server:/app/server
+  ports:
+   - "8200:8000"
+  command: "./server"
